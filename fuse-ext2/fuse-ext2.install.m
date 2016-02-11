@@ -99,7 +99,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 60.00;
 	fuse_ext2Path = kinstalledPath;
 	fuse_ext2Plist = [NSDictionary dictionaryWithContentsOfFile:fuse_ext2Path];
 	if (fuse_ext2Plist == nil) {
-		fuse_ext2Path = [@"/System" stringByAppendingPathComponent:fuse_ext2Path];
+		fuse_ext2Path = [@"" stringByAppendingPathComponent:fuse_ext2Path];
 		fuse_ext2Plist = [NSDictionary dictionaryWithContentsOfFile:fuse_ext2Path];
 	}
 	if (fuse_ext2Plist != nil) {
